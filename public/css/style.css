@@ -338,7 +338,10 @@ hr {
     transition: all 0.5s; }
 
 #intro-1 h1, #intro-2 h1, #intro-4 h1 {
-  padding: 5%; }
+  padding: 1em; }
+
+#intro-3 h1 {
+  padding: 0.5em; }
 
 .circle {
   content: '';

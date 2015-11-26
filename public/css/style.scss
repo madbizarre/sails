@@ -321,7 +321,7 @@ $nav-button-width: 35px;
   @include background-size(cover);
   @include transition(transform .5s);
   &:hover {
-    -webkit-filter: sepia(0.5);
+    -webkit-filter: sepia(.5);
     @include transition(all .5s);
   }
 }
@@ -349,7 +349,12 @@ $nav-button-width: 35px;
 
 #intro-1, #intro-2, #intro-4 {
   h1 {
-    padding: 5%;
+    padding: 1em;
+  }
+}
+#intro-3 {
+  h1 {
+    padding: 0.5em;
   }
 }
 
