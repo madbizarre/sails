@@ -301,6 +301,188 @@ $nav-button-width: 35px;
 /* INTRO
 -------------------------------------------------- */
 
+@import url(http://fonts.googleapis.com/css?family=Oxygen);
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+.preload * {
+  transition: none !important;
+}
+
+body,
+.wrapper {
+  height: 100vh;
+  min-height: 100%;
+}
+
+.grid-unit {
+  position: relative;
+  float: left;
+  border-top: 10px solid #fff;
+  border-left: 10px solid #fff;
+  width: 50%;
+  height: 50%;
+  perspective: 800px;
+  overflow: hidden;
+}
+
+.top-left {
+  //background: rgba(236,208,120,1);
+  background: url(../img/1.jpg) no-repeat 50% 60%;
+  @include background-size(cover);
+}
+
+.top-right {
+  //background: rgba(217,91,67,1);
+  background: url(../img/2.jpg) no-repeat 50% 100%;
+  @include background-size(cover);
+
+  border-right: 10px solid #fff;
+}
+
+.bottom-right {
+  //background: rgba(192,41,66,1);
+  background: url(../img/3.jpg) no-repeat 50% 100%;
+  @include background-size(cover);
+  border-bottom: 10px solid #fff;
+  border-right: 10px solid #fff;
+}
+
+.bottom-left {
+  //background: rgba(84,36,55,1);
+  background: url(../img/4.jpg) no-repeat 50% 55%;
+  @include background-size(cover);
+  border-bottom: 10px solid #fff;
+}
+
+.swing-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 2.5rem;
+  color: #fff;
+  font-family: Oxygen, arial, sans-serif;
+  transform-origin: left 50%;
+  transform: rotateY(120deg);
+  transition: transform .5s ease;
+  letter-spacing: -.05em;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, .2);
+}
+
+.top-right .swing-panel,
+.bottom-right .swing-panel {
+  transform-origin: right 50%;
+  transform: rotateY(-120deg);
+}
+
+.desc {
+  display: block;
+  position: absolute;
+  padding: 5%;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+}
+
+.label {
+  position: absolute;
+  font-family: Oxygen, arial, sans-serif;
+  color: #fff;
+  font-size: 2rem;
+  opacity: 1;
+  @include transition(opacity .5s ease);
+  height: 10%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.grid-unit:hover .label {
+  opacity: 0;
+}
+
+.top-left .label, .top-right .label {
+  top: 0;
+}
+
+.bottom-left .label, .bottom-right .label, .bottom-left .desc, .bottom-right .desc {
+  bottom: 0;
+}
+
+.grid-unit:hover .swing-panel {
+  transform: rotateY(0deg);
+}
+
+.sphere {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 500px;
+  transition: background-color .25s ease;
+  opacity: 1;
+}
+
+$sphere-side: 101px;
+.top-left .sphere {
+  right: -$sphere-side;
+  bottom: -$sphere-side;
+}
+
+.top-right .sphere {
+  left: -$sphere-side;
+  bottom: -$sphere-side;
+}
+
+.bottom-right .sphere {
+  left: -$sphere-side;
+  top: -$sphere-side;
+}
+
+.bottom-left .sphere {
+  right: -$sphere-side;
+  top: -$sphere-side;
+}
+
+.grid-unit:hover .sphere {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.icon {
+  position: absolute;
+  font-size: 2em;
+  transition: all .25s ease;
+  z-index: 5;
+}
+
+.bottom-left .icon {
+  top: 20px;
+  right: 35px;
+  color: rgba(84, 36, 55, 1);
+}
+
+.bottom-right .icon {
+  top: 20px;
+  left: 35px;
+  color: rgba(192, 41, 66, 1);
+}
+
+.top-right .icon {
+  bottom: 20px;
+  left: 35px;
+  color: rgba(217, 91, 67, 1);
+}
+
+.top-left .icon {
+  bottom: 20px;
+  right: 35px;
+  color: rgba(236, 208, 120, 1);
+}
+
+.grid-unit:hover .icon {
+  color: #fff;
+  font-size: 4em;
+}
+
 .intro {
   width: 100%;
   height: 100%;
