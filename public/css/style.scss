@@ -744,13 +744,13 @@ header {/*
   }
 
   @media (max-width: 767px) {
-    #services .reward_list article {
+    #reward_list .reward_list article {
       flex: 0 0 100%;
       margin-bottom: 7%;
     }
   }
   @media (min-width: 768px) and (max-width: 1200px) {
-    #services .reward_list article {
+    #reward_list .reward_list article {
       flex: 0 0 15%;
       margin: 20px;
       h3 {

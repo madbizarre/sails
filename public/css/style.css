@@ -634,14 +634,14 @@ header {
     -o-transform: translateY(0);
     transform: translateY(0); } }
 @media (max-width: 767px) {
-  #test #services .reward_list article {
+  #test #reward_list .reward_list article {
     flex: 0 0 100%;
     margin-bottom: 7%; } }
 @media (min-width: 768px) and (max-width: 1200px) {
-  #test #services .reward_list article {
+  #test #reward_list .reward_list article {
     flex: 0 0 15%;
     margin: 20px; }
-    #test #services .reward_list article h3 {
+    #test #reward_list .reward_list article h3 {
       font-size: 22px; } }
 
 /*# sourceMappingURL=style.css.map */
