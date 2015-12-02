@@ -21,9 +21,7 @@ section {
     padding-bottom: 0; }
 
 footer {
-  background-color: #021425;
-  padding-top: 50px;
-  padding-bottom: 40px; }
+  background: url(../img/4.jpg) no-repeat center 90%; }
 
 hr {
   border-top: 1px solid #000; }
@@ -239,128 +237,119 @@ hr {
     left: 0; } }
 /* INTRO
 -------------------------------------------------- */
+.intro {
+  height: 50vh;
+  min-height: 100%;
+  overflow: hidden;
+  background: url(../img/4.jpg) no-repeat center 80%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 0;
+  margin: 0; }
+
+.intro-wrapper {
+  background-color: rgba(23, 72, 130, 0.2);
+  width: 100%;
+  height: 100%;
+  color: #fff; }
+  .intro-wrapper h1 {
+    margin-top: 15%;
+    text-shadow: 1px 1px 1px #000, .125em .125em 1em black; }
+
 header {
+        /*
+  @mixin intro($n) {
+    $header-transition-duration: .5s;
+    overflow: hidden;
+    position: absolute;
+    top: 10vh * $n;
+    left: 10vw * $n;
+    width: 100vw - 20vw*$n;
+    height: 100vh - 20vh*$n;
+    @include background-size(cover);
+    @include transition(opacity $header-transition-duration);
+    @include border-radius(5px);
+  }
+
+  $header-hover-opacity: .1;
+  $header-transition-duration: .5s;
+
   padding: 0;
   margin: 0;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
-  color: #ffffff; }
-  header h1 {
+  color: #ffffff;
+  max-width: 100%;
+
+  h1 {
     margin: 0;
     padding: 0;
     position: relative;
     top: -moz-calc(5vh - 18px);
     top: -webkit-calc(5vh - 18px);
-    top: calc(5vh - 18px); }
-  header .intro-4 {
+    top: calc(5vh - 18px);
+  }
+
+  .intro-4 {
     background: url(../img/4.jpg) no-repeat;
-    overflow: hidden;
-    position: absolute;
-    top: 0vh;
-    left: 0vw;
-    width: 100vw;
-    height: 100vh;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    -webkit-transition: opacity 0.5s;
-    -moz-transition: opacity 0.5s;
-    -ms-transition: opacity 0.5s;
-    -o-transition: opacity 0.5s;
-    transition: opacity 0.5s;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px; }
-    header .intro-4:hover + .intro-3 {
-      opacity: 0.1; }
-      header .intro-4:hover + .intro-3 + .intro-2 {
-        opacity: 0.1; }
-        header .intro-4:hover + .intro-3 + .intro-2 + .intro-1 {
-          opacity: 0.1; }
-  header .intro-3 {
+    @include intro(0);
+    max-width: 100%;
+    &:hover + .intro-3 {
+      opacity: $header-hover-opacity;
+      + .intro-2 {
+        opacity: $header-hover-opacity;
+        + .intro-1 {
+          opacity: $header-hover-opacity;
+        }
+      }
+    }
+  }
+
+  .intro-3 {
     background: url(../img/3.jpg) no-repeat bottom;
-    overflow: hidden;
-    position: absolute;
-    top: 10vh;
-    left: 10vw;
-    width: 80vw;
-    height: 80vh;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    -webkit-transition: opacity 0.5s;
-    -moz-transition: opacity 0.5s;
-    -ms-transition: opacity 0.5s;
-    -o-transition: opacity 0.5s;
-    transition: opacity 0.5s;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px; }
-    header .intro-3:hover + .intro-2 {
-      opacity: 0.1; }
-      header .intro-3:hover + .intro-2 + .intro-1 {
-        opacity: 0.1; }
-  header .intro-2 {
+    @include intro(1);
+
+    &:hover + .intro-2 {
+      opacity: $header-hover-opacity;
+      + .intro-1 {
+        opacity: $header-hover-opacity;
+      }
+    }
+  }
+
+  .intro-2 {
     background: url(../img/2.jpg) no-repeat bottom;
-    overflow: hidden;
-    position: absolute;
-    top: 20vh;
-    left: 20vw;
-    width: 60vw;
-    height: 60vh;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    -webkit-transition: opacity 0.5s;
-    -moz-transition: opacity 0.5s;
-    -ms-transition: opacity 0.5s;
-    -o-transition: opacity 0.5s;
-    transition: opacity 0.5s;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px; }
-    header .intro-2:hover + .intro-1 {
-      opacity: 0.1; }
-  header .intro-1 {
+    @include intro(2);
+
+    &:hover + .intro-1 {
+      opacity: $header-hover-opacity;
+    }
+  }
+
+  .intro-1 {
     background: url(../img/1.jpg) no-repeat bottom;
-    overflow: hidden;
-    position: absolute;
-    top: 30vh;
-    left: 30vw;
-    width: 40vw;
-    height: 40vh;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    -webkit-transition: opacity 0.5s;
-    -moz-transition: opacity 0.5s;
-    -ms-transition: opacity 0.5s;
-    -o-transition: opacity 0.5s;
-    transition: opacity 0.5s;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px; }
-    header .intro-1 h1 {
+    @include intro(3);
+
+    h1 {
       margin: 0;
       padding: 0;
       position: relative;
-      top: 30%; }
-    header .intro-1 .intro-wrapper {
-      background: rgba(3, 169, 244, 0.15); }
-  header .intro-wrapper {
+      top: 30%;
+    }
+
+    .intro-wrapper {
+      background: rgba(3, 169, 244, 0.15);
+    }
+  }
+
+  .intro-wrapper {
     background-color: rgba(3, 169, 244, 0.1);
     width: 100%;
     height: 100%;
-    -webkit-transition: opacity 0.5s;
-    -moz-transition: opacity 0.5s;
-    -ms-transition: opacity 0.5s;
-    -o-transition: opacity 0.5s;
-    transition: opacity 0.5s; }
+    @include transition(opacity $header-transition-duration);
+  }*/ }
 
 .button-wrapper {
   position: absolute;
@@ -382,14 +371,42 @@ header {
   border-top: 1px solid #DDDDDD;
   padding-bottom: 25px; }
 
+.list-tth li {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  font-size: 2rem;
+  padding: 1rem 0;
+  margin: 2px;
+  list-style: none; }
+  .list-tth li:before {
+    font: normal normal normal 14px/1 FontAwesome;
+    content: "\f13d";
+    color: #174882;
+    padding-right: 0.5rem; }
+  .list-tth li:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1); }
+
 .map {
   padding-top: 0;
   height: 400px; }
+  .map .col-xs-12 {
+    padding: 0; }
   .map .list-inline {
     margin-bottom: 0; }
 
 /* FOOTER
 -------------------------------------------------- */
+.footer-wrapper {
+  background-color: rgba(3, 6, 25, 0.25);
+  padding: 50px 0; }
+
 .footer-list {
   color: #f5f5f5; }
 
@@ -403,7 +420,7 @@ header {
 .footer-social-list {
   font-size: 5rem; }
   .footer-social-list li a img {
-    opacity: 1;
+    will-change: transform;
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -ms-transform: scale(1);
@@ -415,7 +432,6 @@ header {
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
     .footer-social-list li a img:hover {
-      opacity: 0.8;
       -webkit-transform: scale(1.2);
       -moz-transform: scale(1.2);
       -ms-transform: scale(1.2);
@@ -500,5 +516,132 @@ header {
     position: absolute;
     width: 100%;
     bottom: 0; } }
+/*IE8, IE9*/
+#test * {
+  vertical-align: baseline; }
+#test #reward_list .reward_list {
+  margin: 50px auto 0;
+  width: 80%;
+  flex-direction: row;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap; }
+  #test #reward_list .reward_list article {
+    flex: 0 0 20%;
+    margin: 20px;
+    z-index: 1;
+    -webkit-transition: opacity .4s linear, -webkit-transform .4s ease-in-out, -webkit-box-shadow .4s ease-in-out;
+    -moz-transition: opacity .4s linear, -moz-transform .4s ease-in-out, -moz-box-shadow .4s ease-in-out;
+    -o-transition: opacity .4s linear, -o-transform .4s ease-in-out, -o-box-shadow .4s ease-in-out;
+    -ms-transition: opacity .4s linear, -ms-transform .4s ease-in-out, -ms-box-shadow .4s ease-in-out;
+    transition: opacity .4s linear, transform .4s ease-in-out, box-shadow .4s ease-in-out;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden; }
+#test #reward_list article img, #test #reward_list article h3, #test #reward_list article p {
+  -webkit-transition: opacity .2s linear, text-shadow .5s ease-in-out, color .5s ease-in-out;
+  -moz-transition: opacity .2s linear, text-shadow .5s ease-in-out, color .5s ease-in-out;
+  -o-transition: opacity .2s linear, text-shadow .5s ease-in-out, color .5s ease-in-out;
+  -ms-transition: opacity .2s linear, text-shadow .5s ease-in-out, color .5s ease-in-out;
+  transition: opacity .2s linear, text-shadow .5s ease-in-out, color .5s ease-in-out; }
+#test #reward_list article.blur {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9, M12=0, M21=0, M22=0.9, SizingMethod='auto expand')";
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  -webkit-filter: alpha(opacity=80);
+  filter: alpha(opacity=80);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  transform: scale(0.9);
+  opacity: 0.8; }
+  #test #reward_list article.blur img {
+    text-shadow: 0 0 10px rgba(51, 51, 51, 0.9);
+    color: rgba(51, 51, 51, 0);
+    opacity: 0.6;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    -webkit-filter: alpha(opacity=60);
+    filter: alpha(opacity=60); }
+  #test #reward_list article.blur h3 {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    color: rgba(100, 100, 100, 0.3);
+    opacity: 0.6;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    -webkit-filter: alpha(opacity=60);
+    filter: alpha(opacity=60); }
+  #test #reward_list article.blur p {
+    text-shadow: 0 0 10px rgba(51, 51, 51, 0.9);
+    color: rgba(100, 100, 100, 0.3);
+    opacity: 0.6;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    -webkit-filter: alpha(opacity=60);
+    filter: alpha(opacity=60); }
+#test #reward_list article.active {
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=1.08, M12=0, M21=0, M22=1.08, SizingMethod='auto expand')";
+  z-index: 100;
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  -webkit-filter: alpha(opacity=100);
+  filter: alpha(opacity=100); }
+  #test #reward_list article.active img, #test #reward_list article.active p, #test #reward_list article.active h3 {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    -webkit-filter: alpha(opacity=100);
+    filter: alpha(opacity=100); }
+#test .reward_item h3 {
+  font-family: 'Cookie', sans-serif;
+  color: black;
+  margin-bottom: 3%;
+  font-size: 25px; }
+#test .reward_item img {
+  margin-bottom: 10px; }
+#test .reward_item p {
+  word-spacing: 1px;
+  font-size: 13px;
+  font-family: 'Roboto Slab', sans-serif; }
+#test .bounce-inInverse {
+  -webkit-animation: cd-bounce-2-inverse 1s;
+  -moz-animation: cd-bounce-2-inverse 1s;
+  -ms-animation: cd-bounce-2-inverse 1s;
+  -o-animation: cd-bounce-2-inverse 1s;
+  animation: cd-bounce-2-inverse 1s; }
+@keyframes cd-bounce-2-inverse {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(200px);
+    -moz-transform: translateY(200px);
+    -ms-transform: translateY(200px);
+    -o-transform: translateY(200px);
+    transform: translateY(200px); }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateY(-20px);
+    -moz-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    -o-transform: translateY(-20px);
+    transform: translateY(-20px); }
+  100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0); } }
+@media (max-width: 767px) {
+  #test #services .reward_list article {
+    flex: 0 0 100%;
+    margin-bottom: 7%; } }
+@media (min-width: 768px) and (max-width: 1200px) {
+  #test #services .reward_list article {
+    flex: 0 0 15%;
+    margin: 20px; }
+    #test #services .reward_list article h3 {
+      font-size: 22px; } }
 
 /*# sourceMappingURL=style.css.map */
