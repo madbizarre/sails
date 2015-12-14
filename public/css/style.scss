@@ -1005,3 +1005,13 @@ $nav-button-width: 35px;
     }
   }
 }
+
+@media (max-width: 670px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .intro-wrapper h1 {
+    font-size: 2.75rem;
+    margin-bottom: 20px;
+  }
+}

@@ -830,5 +830,12 @@ hr {
     -ms-transform: translateX(0);
     -o-transform: translateX(0);
     transform: translateX(0); } }
+@media (max-width: 670px) {
+  h1 {
+    font-size: 2rem; }
+
+  .intro-wrapper h1 {
+    font-size: 2.75rem;
+    margin-bottom: 20px; } }
 
 /*# sourceMappingURL=style.css.map */
