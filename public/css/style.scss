@@ -683,7 +683,13 @@ $nav-button-width: 35px;
   }
 }
 
-#test2 {
+#tour {
+
+  background: url(../img/city/map.jpg) 30% center no-repeat;
+  @include background-size(cover);
+  h1, .cd-date {
+    color: white;
+  }
 
   a {
     color: #acb7c0;
@@ -839,7 +845,7 @@ $nav-button-width: 35px;
   .cd-timeline-content {
     position: relative;
     margin-left: 60px;
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 0.25em;
     padding: 1em;
     @include box-shadow(0 3px 0 #d7e4ed);
