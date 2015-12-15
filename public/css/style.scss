@@ -103,32 +103,28 @@ hr {
   outline: none !important;
 }
 
-.btn-default-lg, .btn-default-sm {
+.btn-default-lg {
+  background-color: #2ECC71;
   color: black;
-  @include border-radius(0);
   font-family: 'Open Sans', italic;
   font-size: larger;
-  background-color: rgba(237, 237, 237, 0.2);
   border: none;
   font-weight: bold;
+  @include border-radius(50px);
   @include transition(background 0.3s ease-in-out);
-  background-color: #84C512;
   &:hover {
-    background-color: lighten(#84C512, 5);
+    background-color: lighten(#2ECC71, 5);
     @include transition(background 0.3s ease-in-out);
   }
 }
 
 .btn-default-lg {
-  padding: 15px 56px;
-}
-
-.btn-default-sm {
-  padding: 7px 28px;
+  padding: 15px 28px;
 }
 
 .gray {
-  background-color: #ededed;
+  //background-color: #ededed;
+  background-color: #DADFE1;
 }
 
 .white {
@@ -138,7 +134,7 @@ hr {
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 
-$nav-color-main: #174882;
+$nav-color-main: #446CB3;
 $nav-color-active: #FFF;
 $nav-color-link: #FFF;
 
@@ -239,9 +235,9 @@ $nav-button-width: 35px;
   nav {
     position: relative;
     height: 70%;
-    top: 50%;
+    top: 45%;
     @include transform(translateY(-50%));
-    font-size: 4.5rem;
+    font-size: 3rem;
     font-family: 'Vollkorn', serif;
     font-weight: 400;
     text-align: center;
@@ -256,9 +252,9 @@ $nav-button-width: 35px;
 
     li {
       display: block;
-      height: -webkit-calc(100% / 6);
-      height: -moz-calc(100% / 6);
-      height: calc(100% / 6);
+      height: -webkit-calc(100% / 7);
+      height: -moz-calc(100% / 7);
+      height: calc(100% / 7);
       min-height: 50px;
       position: relative;
       opacity: 0;
@@ -400,9 +396,11 @@ $nav-button-width: 35px;
 
 /* FOOTER
 -------------------------------------------------- */
-
+footer address {
+  text-shadow: 1px 1px 0 black;
+}
 .footer-wrapper {
-  background-color: rgba(3, 6, 25, 0.25);
+  background-color: rgba(0, 0, 0, 0.65);
   padding: 50px 0;
 }
 
@@ -687,8 +685,12 @@ $nav-button-width: 35px;
 
   background: url(../img/city/map.jpg) 30% center no-repeat;
   @include background-size(cover);
-  h1, .cd-date {
+  h1 {
     color: white;
+  }
+
+  .cd-date {
+    color: black;
   }
 
   a {
@@ -827,7 +829,6 @@ $nav-button-width: 35px;
     }
   }
 
-
   @keyframes cd-bounce-1 {
     0% {
       opacity: 0;
@@ -872,14 +873,12 @@ $nav-button-width: 35px;
     .cd-read-more {
       float: right;
       padding: .8em 1em;
-      background: #acb7c0;
+      background: #2ECC71;
       color: #ffffff;
       @include border-radius(0.25em);
     }
     .cd-date {
-      float: left;
-      padding: .8em 0;
-      opacity: .7;
+      float: right;
     }
     &::before {
       content: '';
@@ -898,7 +897,7 @@ $nav-button-width: 35px;
   }
 
   @media only screen and (min-width: 768px) {
-    .cd-timeline-content{
+    .cd-timeline-content {
       h2 {
         font-size: 20px;
         font-size: 1.25rem;
@@ -929,10 +928,6 @@ $nav-button-width: 35px;
         float: left;
       }
       .cd-date {
-        position: absolute;
-        width: 100%;
-        left: 122%;
-        top: 6px;
         font-size: 16px;
         font-size: 1rem;
       }
@@ -951,9 +946,7 @@ $nav-button-width: 35px;
         float: right;
       }
       .cd-date {
-        left: auto;
-        right: 122%;
-        text-align: right;
+        float: left;
       }
     }
 
@@ -975,7 +968,6 @@ $nav-button-width: 35px;
       animation: cd-bounce-2-inverse .6s;
     }
   }
-
 
   @keyframes cd-bounce-2 {
     0% {

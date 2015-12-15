@@ -29,24 +29,23 @@ hr {
 .btn:active, .btn:focus {
   outline: none !important; }
 
-.btn-default-lg, .btn-default-sm {
+.btn-default-lg {
+  background-color: #2ECC71;
   color: black;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
   font-family: 'Open Sans', italic;
   font-size: larger;
-  background-color: rgba(237, 237, 237, 0.2);
   border: none;
   font-weight: bold;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
   -webkit-transition: background 0.3s ease-in-out;
   -moz-transition: background 0.3s ease-in-out;
   -ms-transition: background 0.3s ease-in-out;
   -o-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-  background-color: #84C512; }
-  .btn-default-lg:hover, .btn-default-sm:hover {
-    background-color: #94dc14;
+  transition: background 0.3s ease-in-out; }
+  .btn-default-lg:hover {
+    background-color: #40d47e;
     -webkit-transition: background 0.3s ease-in-out;
     -moz-transition: background 0.3s ease-in-out;
     -ms-transition: background 0.3s ease-in-out;
@@ -54,13 +53,10 @@ hr {
     transition: background 0.3s ease-in-out; }
 
 .btn-default-lg {
-  padding: 15px 56px; }
-
-.btn-default-sm {
-  padding: 7px 28px; }
+  padding: 15px 28px; }
 
 .gray {
-  background-color: #ededed; }
+  background-color: #DADFE1; }
 
 .white {
   background-color: #ffffff; }
@@ -100,7 +96,7 @@ hr {
     transform: translateY(-11px) translateX(0) rotate(-45deg);
     background: #FFF; }
   .nav-burger span {
-    background: #174882;
+    background: #446CB3;
     border: none;
     height: 5px;
     width: 100%;
@@ -121,7 +117,7 @@ hr {
 .overlay {
   z-index: 1049;
   position: fixed;
-  background: #174882;
+  background: #446CB3;
   top: 0;
   left: 0;
   width: 100%;
@@ -180,13 +176,13 @@ hr {
   .overlay nav {
     position: relative;
     height: 70%;
-    top: 50%;
+    top: 45%;
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
-    font-size: 4.5rem;
+    font-size: 3rem;
     font-family: 'Vollkorn', serif;
     font-weight: 400;
     text-align: center; }
@@ -199,9 +195,9 @@ hr {
     height: 100%; }
     .overlay ul li {
       display: block;
-      height: -webkit-calc(100% / 6);
-      height: -moz-calc(100% / 6);
-      height: calc(100% / 6);
+      height: -webkit-calc(100% / 7);
+      height: -moz-calc(100% / 7);
+      height: calc(100% / 7);
       min-height: 50px;
       position: relative;
       opacity: 0; }
@@ -321,8 +317,11 @@ hr {
 
 /* FOOTER
 -------------------------------------------------- */
+footer address {
+  text-shadow: 1px 1px 0 black; }
+
 .footer-wrapper {
-  background-color: rgba(3, 6, 25, 0.25);
+  background-color: rgba(0, 0, 0, 0.65);
   padding: 50px 0; }
 
 .footer-list {
@@ -568,8 +567,10 @@ hr {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
-  #tour h1, #tour .cd-date {
+  #tour h1 {
     color: white; }
+  #tour .cd-date {
+    color: black; }
   #tour a {
     color: #acb7c0;
     text-decoration: none;
@@ -713,15 +714,13 @@ hr {
     #tour .cd-timeline-content .cd-read-more {
       float: right;
       padding: .8em 1em;
-      background: #acb7c0;
+      background: #2ECC71;
       color: #ffffff;
       -webkit-border-radius: 0.25em;
       -moz-border-radius: 0.25em;
       border-radius: 0.25em; }
     #tour .cd-timeline-content .cd-date {
-      float: left;
-      padding: .8em 0;
-      opacity: .7; }
+      float: right; }
     #tour .cd-timeline-content::before {
       content: '';
       position: absolute;
@@ -756,10 +755,6 @@ hr {
       #tour .cd-timeline-content .cd-read-more {
         float: left; }
       #tour .cd-timeline-content .cd-date {
-        position: absolute;
-        width: 100%;
-        left: 122%;
-        top: 6px;
         font-size: 16px;
         font-size: 1rem; }
     #tour .cd-timeline-block:nth-child(even) .cd-timeline-content {
@@ -773,9 +768,7 @@ hr {
       #tour .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
         float: right; }
       #tour .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
-        left: auto;
-        right: 122%;
-        text-align: right; }
+        float: left; }
     #tour .cssanimations .cd-timeline-content.is-hidden {
       visibility: hidden; }
     #tour .cssanimations .cd-timeline-content.bounce-in {
