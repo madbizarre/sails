@@ -18,28 +18,33 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
-<div class="nav-burger" id="toggle">
-    <span class="top"></span>
-    <span class="middle"></span>
-    <span class="bottom"></span>
-</div>
-<div class="overlay" id="overlay">
-    <nav class="overlay-menu">
-        <ul>
-            <li><a href="#">Домой</a></li>
-            <li><a href="#about">О регате</a></li>
-            <li><a href="#tour">Этапы и порты</a></li>
-            <li class="hidden-xs"><a href="#list">Список зарегистрированных судов на The Tall Ships Races
-                    2016</a></li>
-            <li class="hidden-sm hidden-md hidden-lg"><a href="#list">Список зарегистр. судов</a></li>
-            <li><a href="#info">Общая информация</a></li>
-            <li><a href="#map-section">Как нас найти</a></li>
-        </ul>
+<body data-spy="scroll" data-target="#navbar">
+<div class="navbar-wrapper">
+    <nav class="navbar nav-tabs navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars fa-2x"></i>
+                </button>
+                <a class="navbar-brand text-capitalize" href="#"><%= title %></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#intro">Домой</a></li>
+                    <li><a href="#about">О регате</a></li>
+                    <li><a href="#tour">Этапы и порты</a></li>
+                    <li><a href="#list">Список судов</a></li>
+                    <li><a href="#info">Общая информация</a></li>
+                    <li><a href="#map-section">Как нас найти</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 </div>
 
-<header class="intro">
+<header class="intro" id="intro">
     <div class="intro-wrapper">
         <div class="container text-center">
             <div class="col-xs-12">
@@ -53,15 +58,15 @@
         </div>
     </div>
 </header>
-<main role="main">
 
+<main role="main">
     <section class="white" id="about">
         <div class="container text-center">
             <h1 class="text-uppercase">О регате</h1>
             <hr class="subtitle-divider"/>
             <p class="text-left">
-                « Мир » обладатель призов , престижных регат "Cutty Sark Tall Ship's Races", "International Hochsee Race
-                Seestadt" и "Grand Regatta Columbus-92". На протяжении длинной истории регат «Мир» единственное судно
+                «Мир» обладатель призов, престижных регат "Cutty Sark Tall Ship's Races", "International Hochsee Race
+                Seestadt" и "Grand Regatta Columbus&#8209;92". На протяжении длинной истории регат «Мир» единственное судно
                 класса «А», которое дважды становилось абсолютным победителем.
                 <br/><br/>
                 Впервые в истории у Вас появилась возможность стать частью команды
@@ -183,8 +188,10 @@
                 Цена участия в одном этапе от 800 евро <br/>
                 Без учета перелета и трансфера <br/>
                 С общими условиями можно ознакомиться по <a href="http://www.tall-shipmir.ru/info">ссылке</a></p>
-                <br/> <br/>
-            <p class="text-left">«Мир» - третий в серии из шести кораблей класса М-108, (также называемый МИР класс), которые были
+            <br/> <br/>
+
+            <p class="text-left">«Мир» - третий в серии из шести кораблей класса М-108, (также называемый МИР класс),
+                которые были
                 построены в 80х годах на судоверфи Ленина в Гданьске - Польша. Первый в серии «Дар Млодзежи» - приписан
                 порту Гдыня - Польша. Остальные корабли - Херсонес, Паллада, Дружба, Надежда были построены для бывшего
                 Советского союза. С 1988 года «Мир» принимает участие в международных гонках парусных судов.</p>

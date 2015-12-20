@@ -61,178 +61,36 @@ hr {
 .white {
   background-color: #ffffff; }
 
-/* CUSTOMIZE THE NAVBAR
--------------------------------------------------- */
-.nav-burger {
+.navbar-wrapper {
   position: fixed;
-  top: 5%;
-  right: 2%;
-  height: 27px;
-  width: 35px;
-  cursor: pointer;
-  z-index: 1050;
-  -webkit-transition: opacity 0.25s ease;
-  -moz-transition: opacity 0.25s ease;
-  -ms-transition: opacity 0.25s ease;
-  -o-transition: opacity 0.25s ease;
-  transition: opacity 0.25s ease; }
-  .nav-burger:hover {
-    opacity: .7; }
-  .nav-burger.active .top {
-    -webkit-transform: translateY(11px) translateX(0) rotate(45deg);
-    -moz-transform: translateY(11px) translateX(0) rotate(45deg);
-    -ms-transform: translateY(11px) translateX(0) rotate(45deg);
-    -o-transform: translateY(11px) translateX(0) rotate(45deg);
-    transform: translateY(11px) translateX(0) rotate(45deg);
-    background: #FFF; }
-  .nav-burger.active .middle {
-    opacity: 0;
-    background: #FFF; }
-  .nav-burger.active .bottom {
-    -webkit-transform: translateY(-11px) translateX(0) rotate(-45deg);
-    -moz-transform: translateY(-11px) translateX(0) rotate(-45deg);
-    -ms-transform: translateY(-11px) translateX(0) rotate(-45deg);
-    -o-transform: translateY(-11px) translateX(0) rotate(-45deg);
-    transform: translateY(-11px) translateX(0) rotate(-45deg);
-    background: #FFF; }
-  .nav-burger span {
-    background: #446CB3;
-    border: none;
-    height: 5px;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    -webkit-transition: all 0.35s ease;
-    -moz-transition: all 0.35s ease;
-    -ms-transition: all 0.35s ease;
-    -o-transition: all 0.35s ease;
-    transition: all 0.35s ease;
-    cursor: pointer; }
-    .nav-burger span:nth-of-type(2) {
-      top: 11px; }
-    .nav-burger span:nth-of-type(3) {
-      top: 22px; }
-
-.overlay {
-  z-index: 1049;
-  position: fixed;
-  background: #446CB3;
   top: 0;
+  right: 0;
   left: 0;
-  width: 100%;
-  height: 0%;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: opacity .35s, visibility .35s, height .35s;
-  -moz-transition: opacity .35s, visibility .35s, height .35s;
-  -ms-transition: opacity .35s, visibility .35s, height .35s;
-  -o-transition: opacity .35s, visibility .35s, height .35s;
-  transition: opacity .35s, visibility .35s, height .35s;
-  overflow: hidden;
-  will-change: opacity; }
-  .overlay.open {
-    opacity: .9;
-    visibility: visible;
-    height: 100%; }
-    .overlay.open li {
-      -webkit-animation: fadeInRight .5s ease forwards;
-      -o-animation: fadeInRight .5s ease forwards;
-      animation: fadeInRight .5s ease forwards;
-      -webkit-animation-delay: .35s;
-      -moz-animation-delay: .35s;
-      -o-animation-delay: .35s;
-      animation-delay: .35s; }
-      .overlay.open li:nth-of-type(2) {
-        -webkit-animation-delay: 0.4s;
-        -moz-animation-delay: 0.4s;
-        -o-animation-delay: 0.4s;
-        animation-delay: 0.4s; }
-      .overlay.open li:nth-of-type(3) {
-        -webkit-animation-delay: 0.45s;
-        -moz-animation-delay: 0.45s;
-        -o-animation-delay: 0.45s;
-        animation-delay: 0.45s; }
-      .overlay.open li:nth-of-type(4) {
-        -webkit-animation-delay: 0.5s;
-        -moz-animation-delay: 0.5s;
-        -o-animation-delay: 0.5s;
-        animation-delay: 0.5s; }
-      .overlay.open li:nth-of-type(5) {
-        -webkit-animation-delay: 0.55s;
-        -moz-animation-delay: 0.55s;
-        -o-animation-delay: 0.55s;
-        animation-delay: 0.55s; }
-      .overlay.open li:nth-of-type(6) {
-        -webkit-animation-delay: 0.6s;
-        -moz-animation-delay: 0.6s;
-        -o-animation-delay: 0.6s;
-        animation-delay: 0.6s; }
-      .overlay.open li:nth-of-type(7) {
-        -webkit-animation-delay: 0.65s;
-        -moz-animation-delay: 0.65s;
-        -o-animation-delay: 0.65s;
-        animation-delay: 0.65s; }
-  .overlay nav {
-    position: relative;
-    height: 70%;
-    top: 45%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
-    font-size: 3rem;
-    font-family: 'Vollkorn', serif;
-    font-weight: 400;
-    text-align: center; }
-  .overlay ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    display: inline-block;
-    position: relative;
-    height: 100%; }
-    .overlay ul li {
-      display: block;
-      height: -webkit-calc(100% / 7);
-      height: -moz-calc(100% / 7);
-      height: calc(100% / 7);
-      min-height: 50px;
-      position: relative;
-      opacity: 0; }
-      .overlay ul li a {
-        display: block;
-        position: relative;
-        color: #FFF;
-        text-decoration: none;
-        overflow: hidden; }
-        .overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li a:active:after {
-          width: 100%; }
-        .overlay ul li a:after {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          left: 50%;
-          width: 0%;
-          -webkit-transform: translateX(-50%);
-          -moz-transform: translateX(-50%);
-          -ms-transform: translateX(-50%);
-          -o-transform: translateX(-50%);
-          transform: translateX(-50%);
-          height: 3px;
-          background: #FFF;
-          transition: .35s; }
+  z-index: 100; }
+  .navbar-wrapper > .container {
+    padding-right: 0;
+    padding-left: 0; }
+  .navbar-wrapper .navbar {
+    background-color: white;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding-right: 15px;
+    padding-left: 15px;
+    border: none;
+    -webkit-box-shadow: 0 0 3px #000;
+    -moz-box-shadow: 0 0 3px #000;
+    -ms-box-shadow: 0 0 3px #000;
+    -o-box-shadow: 0 0 3px #000;
+    box-shadow: 0 0 3px #000; }
+    .navbar-wrapper .navbar a {
+      color: #000; }
+    .navbar-wrapper .navbar .active > a {
+      background-color: #6BB9F0; }
+  .navbar-wrapper .navbar-toggle {
+    border: none;
+    padding: 0; }
+    .navbar-wrapper .navbar-toggle:focus {
+      background-color: transparent; }
 
-@keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    left: 20%; }
-  100% {
-    opacity: 1;
-    left: 0; } }
-/* INTRO
--------------------------------------------------- */
 .intro {
   height: 75vh;
   min-height: 100%;
@@ -275,11 +133,6 @@ hr {
   .button-wrapper button {
     max-width: 100%; }
 
-/* MAIN CONTENT
--------------------------------------------------- */
-.divider {
-  margin: 80px 0; }
-
 .subtitle-divider {
   width: 20%;
   border-top: 1px solid #ABB7B7;
@@ -313,8 +166,6 @@ hr {
   .map .col-xs-12 {
     padding: 0; }
 
-/* FOOTER
--------------------------------------------------- */
 footer address {
   text-shadow: 1px 1px 0 black; }
 
@@ -324,13 +175,6 @@ footer address {
 
 .footer-list {
   color: #f5f5f5; }
-
-.footer-menu-header {
-  font-size: 2rem; }
-
-.footer-menu {
-  color: #337ab7;
-  font-size: 1.5rem; }
 
 .footer-social-list {
   font-size: 5rem; }
@@ -378,8 +222,6 @@ footer address {
     width: 100%;
     height: 100%; }
 
-/* CONTACT MODAL
--------------------------------------------------- */
 .contact {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -426,32 +268,6 @@ footer address {
   font-size: 30px;
   font-weight: 400; }
 
-/* RESPONSIVE CSS
--------------------------------------------------- */
-@media (max-width: 767px) {
-  .overlay nav {
-    font-size: 3rem; }
-
-  #intro-1 .hidden-sm.hidden-md.hidden-lg, #intro-2 .hidden-sm.hidden-md.hidden-lg, #intro-3 .hidden-sm.hidden-md.hidden-lg, #intro-4 .hidden-sm.hidden-md.hidden-lg {
-    position: relative;
-    bottom: -15vh; }
-  #intro-1 h1, #intro-2 h1, #intro-3 h1, #intro-4 h1 {
-    height: 2.5em; } }
-@media (max-width: 767px) and (orientation: landscape) {
-  .hidden-xs-landscape {
-    display: none !important; }
-
-  #intro-1, #intro-2, #intro-3, #intro-4 {
-    height: 100vh; }
-    #intro-1 .hidden-sm.hidden-md.hidden-lg, #intro-2 .hidden-sm.hidden-md.hidden-lg, #intro-3 .hidden-sm.hidden-md.hidden-lg, #intro-4 .hidden-sm.hidden-md.hidden-lg {
-      position: relative;
-      bottom: -40vh; } }
-@media (min-width: 768px) {
-  .intro #intro-3 h1, .intro #intro-4 h1 {
-    position: absolute;
-    width: 100%;
-    bottom: 0; } }
-/*IE8, IE9*/
 #info * {
   vertical-align: baseline; }
 #info #reward_list .reward_list {
