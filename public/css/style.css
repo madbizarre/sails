@@ -561,7 +561,7 @@ footer address {
       float: none; } }
 
 @media (max-width: 670px) {
-  h1 {
+  h1, h2 {
     font-size: 2rem; }
 
   .intro-wrapper h1 {
