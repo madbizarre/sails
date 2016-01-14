@@ -499,8 +499,9 @@ footer address {
 
 #tour {
 
-  background: url(../img/city/map.jpg) 30% center no-repeat;
+  background: url(../img/flags/map.jpg) 30% center no-repeat;
   @include background-size(cover);
+
   h1 {
     color: white;
   }
@@ -513,10 +514,6 @@ footer address {
     color: #acb7c0;
     text-decoration: none;
     font-family: "Open Sans", sans-serif;
-  }
-
-  img {
-    max-width: 100%;
   }
 
   h2 {
@@ -537,55 +534,14 @@ footer address {
   }
 
   #cd-timeline {
-    position: relative;
-    padding: 2em 0;
-    margin-top: 2em;
-    margin-bottom: 2em;
-
     &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 18px;
-      height: 100%;
-      width: 4px;
-      background: #d7e4ed;
+      background: #E30514;
     }
-  }
-
-  @media only screen and (min-width: 1170px) {
-    #cd-timeline {
-      margin-top: 3em;
-      margin-bottom: 3em;
-
-      &::before {
-        left: 50%;
-        margin-left: -2px;
-      }
-    }
-  }
-
-  .cd-timeline-block {
-    position: relative;
-    margin: 2em 0;
-
-    &::after {
-      clear: both;
-      content: "";
-      display: table;
-    }
-    &:first-child {
-      margin-top: 0;
-    }
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  @media only screen and (min-width: 1170px) {
     .cd-timeline-block {
-      margin: 4em 0;
-
+      &:nth-child(odd) {
+        margin: 2em 0;
+        height: 64px;
+      }
       &:first-child {
         margin-top: 0;
       }
@@ -595,67 +551,69 @@ footer address {
     }
   }
 
+  #cd-timeline2 {
+    padding-top: 2em;
+    &::before {
+      background: #FFCC00;
+    }
+    .cd-timeline-block {
+      &:nth-child(even) {
+        margin: 2em 0;
+        height: 64px;
+      }
+      &:first-child {
+        padding-top: 2em;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  #cd-timeline, #cd-timeline2 {
+    position: relative;
+    padding: 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 28px;
+      height: 100%;
+      width: 4px;
+    }
+  }
+
+  .cd-timeline-block {
+    position: relative;
+
+    &::after {
+      clear: both;
+      content: "";
+      display: table;
+    }
+  }
+
   .cd-timeline-img {
     position: absolute;
     top: 0;
     left: 0;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     box-shadow: 0 0 0 4px #ffffff, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
-    img {
-      display: block;
-      width: 24px;
-      height: 24px;
-      position: relative;
-      left: 50%;
-      top: 50%;
-      margin-left: -12px;
-      margin-top: -12px;
-    }
-    &.cd-picture {
-      background: #75ce66;
-    }
-    &.cd-location {
-      background: #f0ca45;
-    }
-    &.cd-movie {
-      background: #c03b44;
-    }
-  }
 
-  @media only screen and (min-width: 1170px) {
-    .cd-timeline-img {
-      width: 60px;
-      height: 60px;
-      left: 50%;
-      margin-left: -30px;
-      /* Force Hardware Acceleration in WebKit */
-      -webkit-transform: translateZ(0);
-      -webkit-backface-visibility: hidden;
+    &.cd-belgium {
+      background: url(../img/flags/Belgium.png) center center no-repeat;
+      @include background-size(cover);
     }
-    .cssanimations .cd-timeline-img.is-hidden {
-      visibility: hidden;
+    &.cd-portugal {
+      background: url(../img/flags/Portugal.png) center center no-repeat;
+      @include background-size(cover);
     }
-    .cssanimations .cd-timeline-img.bounce-in {
-      visibility: visible;
-      -webkit-animation: cd-bounce-1 .6s;
-      -moz-animation: cd-bounce-1 .6s;
-      animation: cd-bounce-1 .6s;
-    }
-  }
-
-  @keyframes cd-bounce-1 {
-    0% {
-      opacity: 0;
-      @include transform(scale(0.5));
-    }
-    60% {
-      opacity: 1;
-      @include transform(scale(1.2));
-    }
-    100% {
-      @include transform(scale(1));
+    &.cd-spain {
+      background: url(../img/flags/Spain.png) center center no-repeat;
+      @include background-size(cover);
     }
   }
 
@@ -665,6 +623,8 @@ footer address {
     background: rgba(255, 255, 255, 0.9);
     border-radius: 0.25em;
     padding: 1em;
+    float: right;
+    text-align: left;
     @include box-shadow(0 3px 0 #d7e4ed);
 
     &::after {
@@ -674,10 +634,13 @@ footer address {
     }
     h2 {
       color: #303e49;
+      text-align: center;
     }
     p, .cd-read-more, .cd-date {
-      font-size: 13px;
-      font-size: .8125rem;
+      font-size: 1em;
+    }
+    .cd-date, .cd-read-more {
+      padding: .8em 1em;
     }
     .cd-read-more, .cd-date {
       display: inline-block;
@@ -688,18 +651,14 @@ footer address {
     }
     .cd-read-more {
       float: right;
-      padding: .8em 1em;
       background: #2ECC71;
-      color: #ffffff;
+      color: #000;
       @include border-radius(0.25em);
-    }
-    .cd-date {
-      float: right;
     }
     &::before {
       content: '';
       position: absolute;
-      top: 16px;
+      top: 45%;
       right: 100%;
       height: 0;
       width: 0;
@@ -712,30 +671,31 @@ footer address {
     background-color: #bac4cb;
   }
 
-  @media only screen and (min-width: 768px) {
-    .cd-timeline-content {
-      h2 {
-        font-size: 20px;
-        font-size: 1.25rem;
-      }
-      p {
-        font-size: 16px;
-        font-size: 1rem;
-      }
-      .cd-read-more, .cd-date {
-        font-size: 14px;
-        font-size: 0.875rem;
+  @media (min-width: 1170px) {
+    #cd-timeline, #cd-timeline2 {
+      &::before {
+        left: 50%;
+        margin-left: -2px;
       }
     }
-  }
-  @media only screen and (min-width: 1170px) {
+    .cd-timeline-img {
+      left: 47.55%;
+    }
+    .cd-timeline-block {
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
     .cd-timeline-content {
       margin-left: 0;
-      padding: 1.6em;
       width: 45%;
 
       &::before {
-        top: 24px;
+        top: 45%;
         left: 100%;
         border-color: transparent;
         border-left-color: #ffffff;
@@ -743,16 +703,11 @@ footer address {
       .cd-read-more {
         float: left;
       }
-      .cd-date {
-        font-size: 16px;
-        font-size: 1rem;
-      }
     }
 
-    .cd-timeline-block:nth-child(even) .cd-timeline-content {
-      float: right;
+    .cd-timeline-block .cd-timeline-content {
       &::before {
-        top: 24px;
+        top: 45%;
         left: auto;
         right: 100%;
         border-color: transparent;
@@ -761,57 +716,15 @@ footer address {
       .cd-read-more {
         float: right;
       }
-      .cd-date {
-        float: left;
-      }
-    }
-
-    .cssanimations .cd-timeline-content.is-hidden {
-      visibility: hidden;
-    }
-    .cssanimations .cd-timeline-content.bounce-in {
-      visibility: visible;
-      -webkit-animation: cd-bounce-2 .6s;
-      -moz-animation: cd-bounce-2 .6s;
-      animation: cd-bounce-2 .6s;
     }
   }
 
-  @media only screen and (min-width: 1170px) {
-    .cssanimations .cd-timeline-block:nth-child(even) .cd-timeline-content.bounce-in {
-      -webkit-animation: cd-bounce-2-inverse .6s;
-      -moz-animation: cd-bounce-2-inverse .6s;
-      animation: cd-bounce-2-inverse .6s;
+  @media (max-width: 1169px) {
+    .cd-timeline-content {
+      float: none;
     }
   }
 
-  @keyframes cd-bounce-2 {
-    0% {
-      opacity: 0;
-      @include transform(translateX(-100px));
-    }
-    60% {
-      opacity: 1;
-      @include transform(translateX(20px));
-    }
-    100% {
-      @include transform(translateX(0));
-    }
-  }
-
-  @keyframes cd-bounce-2-inverse {
-    0% {
-      opacity: 0;
-      @include transform(translateX(100px));
-    }
-    60% {
-      opacity: 1;
-      @include transform(translateX(-20px));
-    }
-    100% {
-      @include transform(translateX(0));
-    }
-  }
 }
 
 @media (max-width: 670px) {

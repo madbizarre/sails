@@ -66,7 +66,8 @@
             <hr class="subtitle-divider"/>
             <p class="text-left">
                 «Мир» обладатель призов, престижных регат "Cutty Sark Tall Ship's Races", "International Hochsee Race
-                Seestadt" и "Grand Regatta Columbus&#8209;92". На протяжении длинной истории регат «Мир» единственное судно
+                Seestadt" и "Grand Regatta Columbus&#8209;92". На протяжении длинной истории регат «Мир» единственное
+                судно
                 класса «А», которое дважды становилось абсолютным победителем.
                 <br/><br/>
                 Впервые в истории у Вас появилась возможность стать частью команды
@@ -105,16 +106,18 @@
         <h1>Выбрать дату и отрезок</h1>
         <hr class="subtitle-divider"/>
 
-        <section id="cd-timeline" class="cd-container">
-            <div class="cd-timeline-block" id="blockOne">
-                <div class="cd-timeline-img cd-picture">
-                    <img src="img/city/Antwerp.png" alt="Picture">
-                </div>
+        <section class="cd-container" id="cd-timeline">
+
+            <div class="cd-timeline-block">
+                <div class="cd-timeline-img cd-belgium"></div>
+            </div>
+
+            <div class="cd-timeline-block">
 
                 <div class="cd-timeline-content">
-                    <h2>Бельгия, Антверпен</h2>
+                    <h2>Бельгия, Антверпен - Португалия,&nbsp;Лисабон</h2>
 
-                    <p</p>
+                    <p></p>
                     <a href="http://www.sailtraininginternational.org/events/2016-the-tall-ships-races/antwerp"
                        class="cd-read-more">Узнать больше</a>
                     <span class="cd-date">с 7 по 10 Июля</span>
@@ -122,12 +125,13 @@
             </div>
 
             <div class="cd-timeline-block">
-                <div class="cd-timeline-img cd-movie">
-                    <img src="img/city/119px-Crest_of_Lisboa.svg.png" alt="Movie">
-                </div>
+                <div class="cd-timeline-img cd-portugal"></div>
+            </div>
+
+            <div class="cd-timeline-block">
 
                 <div class="cd-timeline-content">
-                    <h2>Португалия, Лисабон</h2>
+                    <h2>Португалия, Лисабон - Испания,&nbsp;Кадиз</h2>
 
                     <p></p>
                     <a href="http://www.sailtraininginternational.org/events/2016-the-tall-ships-races/lisbon/"
@@ -137,12 +141,14 @@
             </div>
 
             <div class="cd-timeline-block">
-                <div class="cd-timeline-img cd-picture">
-                    <img src="img/city/114px-Escudo_de_Cádiz_(oval).svg.png" alt="Picture">
-                </div>
+                <div class="cd-timeline-img cd-spain"></div>
+            </div>
+        </section>
+        <section class="cd-container" id="cd-timeline2">
 
+            <div class="cd-timeline-block">
                 <div class="cd-timeline-content">
-                    <h2>Испания, Кадиз</h2>
+                    <h2>Испания, Кадиз - Испания,&nbsp;Ла&#8209;Корунья</h2>
 
                     <p></p>
                     <a href="http://www.sailtraininginternational.org/events/2016-the-tall-ships-races/cadiz"
@@ -152,21 +158,10 @@
             </div>
 
             <div class="cd-timeline-block">
-                <div class="cd-timeline-img cd-location">
-                    <img src="img/city/82px-Escudo_de_A_Coruña.svg.png" alt="Location">
-                </div>
-
-                <div class="cd-timeline-content">
-                    <h2>Испания, Ла&#8209;Корунья</h2>
-
-                    <p></p>
-                    <a href="http://www.sailtraininginternational.org/events/2016-the-tall-ships-races/a-corua/"
-                       class="cd-read-more">Узнать больше</a>
-                    <span class="cd-date">с 11 по 14 Августа</span>
-                </div>
+                <div class="cd-timeline-img cd-spain"></div>
             </div>
-
         </section>
+
     </section>
 
     <section class="white" id="schema">
@@ -540,92 +535,5 @@
         crossorigin="anonymous"></script>
 <script src="http://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
 <script src="js/main.js"></script>
-<script type="text/javascript">
-    var map;
-
-    DG.then(function (){
-        map = DG.map('map', {
-            center: [59.941211, 30.276873],
-            zoom: 16,
-            scrollWheelZoom: false
-        });
-        DG.control.location({position: 'bottomright'}).addTo(map);
-        DG.control.traffic().addTo(map);
-        DG.marker([59.941211, 30.276873]).addTo(map).bindPopup('Санкт-Петербург, В.О. 9-линия 34, БЦ «Магнус», офис 201');
-    });
-
-    $('#toggle').click(function (){
-        $(this).toggleClass('active');
-        $('#overlay').toggleClass('open');
-    });
-
-    jQuery(function (){
-
-        $(window).load(function (){
-
-            $('.wrapper').removeClass('preload');
-
-        });
-
-    });
-
-
-    /* BLUR EFFECT */
-
-    var $rewardList = $('.reward_list'),
-            $rewardItem = $rewardList.children('article'),
-            timeout;
-
-    $rewardItem.on('mouseenter', function (event){
-        var $item = $(this);
-        clearTimeout(timeout);
-        timeout = setTimeout(function (){
-            if ($item.hasClass('active')) return false;
-            $rewardItem.not($item).removeClass('active').addClass('blur');
-            $item.removeClass('blur').addClass('active');
-        }, 75);
-    });
-    $('.reward_list', '#reward_list ').on('mouseleave', function (event){
-        clearTimeout(timeout);
-        $rewardItem.removeClass('active blur');
-    });
-
-    $(document).ready(function (){
-//        $('#virtualShip').muted = true;
-        $("#toggleVirtualShip").click(function (){
-            var $iframe = $("#virtualShip");
-            $iframe.attr("src", $iframe.data("src"));
-            $iframe.show();
-            $(this).hide();
-        });
-    });
-
-    $(document).ready(function ($){
-        var $timeline_block = $('.cd-timeline-block');
-
-        //hide timeline blocks which are outside the viewport
-        $timeline_block.each(function (){
-            if ($(this).offset().top > $(window).scrollTop() + $(window).height() * 0.75) {
-                $(this).find('.cd-timeline-img, .cd-timeline-content').addClass('is-hidden');
-            }
-        });
-
-        //on scolling, show/animate timeline blocks when enter the viewport
-        $(window).on('scroll', function (){
-            $timeline_block.each(function (){
-                var windowDiff = $(window).height() - ($(window).height() * 0.75);
-                var fadeOffset = $(this).offset().top + $(this).height();
-                var scrollPos = $(window).scrollTop();
-
-                if ($(this).offset().top <= $(window).scrollTop() + $(window).height() * 0.75 && $(this).find('.cd-timeline-img').hasClass('is-hidden')) {
-                    $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
-                }
-                else if (fadeOffset < (scrollPos + windowDiff)) {
-                    $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('bounce-in').addClass('is-hidden');
-                }
-            });
-        });
-    });
-</script>
 </body>
 </html>
