@@ -65,6 +65,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
 //font-family: 'Open Sans';
 @import url(http://fonts.googleapis.com/css?family=Vollkorn|Roboto);
+@import url(https://fonts.googleapis.com/css?family=Lato);
 
 /* VARIABLES
 -------------------------------------------------- */
@@ -184,8 +185,9 @@ hr {
   .container {
     padding-top: 10%;
   }
-  h1 {
+  h1, h2 {
     text-shadow: 1px 1px 1px #000, .125em .125em 1em black;
+    font-family: 'Lato', sans-serif;
   }
 }
 
@@ -283,6 +285,29 @@ footer address {
   }
 }
 
+#schema {
+  li {
+    @include transition(all 0.3s ease-in-out);
+    font-size: 2rem;
+    padding: 1rem 0;
+    margin: 2px;
+    &:before {
+      font-family: FontAwesome;
+      padding-right: .5rem;
+    }
+    &:hover {
+      @include transform(scale(1.1));
+    }
+  }
+  .okay li:before {
+    content: "\f00c";
+    color: #2ECC71;
+  }
+  .none li:before {
+    content: "\f00d";
+    color: #D91E18;
+  }
+}
 .video-container {
   position: relative;
   padding-bottom: 56.25%;
