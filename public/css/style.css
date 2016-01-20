@@ -222,17 +222,19 @@ footer address {
     font-family: FontAwesome;
     padding-right: .5rem; }
   #schema li:hover {
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    transform: scale(1.1); }
+    -webkit-transform: scale(1.1) translateX(1.1em);
+    -moz-transform: scale(1.1) translateX(1.1em);
+    -ms-transform: scale(1.1) translateX(1.1em);
+    -o-transform: scale(1.1) translateX(1.1em);
+    transform: scale(1.1) translateX(1.1em); }
 #schema .okay li:before {
   content: "\f00c";
   color: #2ECC71; }
 #schema .none li:before {
   content: "\f00d";
   color: #D91E18; }
+#schema .row {
+  padding-bottom: 20px; }
 
 .video-container {
   position: relative;

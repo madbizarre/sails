@@ -296,7 +296,7 @@ footer address {
       padding-right: .5rem;
     }
     &:hover {
-      @include transform(scale(1.1));
+      @include transform(scale(1.1) translateX(1.1em));
     }
   }
   .okay li:before {
@@ -306,6 +306,9 @@ footer address {
   .none li:before {
     content: "\f00d";
     color: #D91E18;
+  }
+  .row {
+    padding-bottom: 20px;
   }
 }
 .video-container {
