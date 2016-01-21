@@ -25,7 +25,7 @@
                 }
             },
             ajaxSuccess = function (data){
-                //try{yaCounterXXXXXXX.reachGoal('sendData');}catch(e){}
+                try{yaCounter34841190.reachGoal('sendData');}catch(e){}
                 $btnSubmit.button('reset');
                 closeAlert();
                 $contactTitle.html('Спасибо, заявка отправлена');
