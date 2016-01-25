@@ -66,7 +66,7 @@
 //font-family: 'Open Sans';
 @import url(http://fonts.googleapis.com/css?family=Vollkorn|Roboto);
 @import url(https://fonts.googleapis.com/css?family=Lato);
-
+@import url(../font/nautilus.css);
 /* VARIABLES
 -------------------------------------------------- */
 $red: #CF212F;
@@ -181,13 +181,14 @@ hr {
   background-color: rgba(23, 72, 130, 0.2);
   width: 100%;
   height: 100%;
-  color: #fff;
+  color: #f9bf3b;
+  color: #FFC233;
   .container {
     padding-top: 10%;
   }
   h1, h2 {
     text-shadow: 1px 1px 1px #000, .125em .125em 1em black;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Nautilus Pompilius';
   }
 }
 
@@ -662,7 +663,7 @@ footer address {
       color: #303e49;
       text-align: center;
     }
-    p, .cd-read-more, .cd-date {
+    p, ul, .cd-read-more, .cd-date {
       font-size: 1em;
     }
     .cd-date, .cd-read-more {
@@ -671,7 +672,7 @@ footer address {
     .cd-read-more, .cd-date {
       display: inline-block;
     }
-    p {
+    p, ul {
       margin: 1em 0;
       line-height: 1.6;
     }

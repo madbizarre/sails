@@ -5,6 +5,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
 @import url(http://fonts.googleapis.com/css?family=Vollkorn|Roboto);
 @import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(../font/nautilus.css);
 /* VARIABLES
 -------------------------------------------------- */
 /* COMMON TAGS AND CLASES
@@ -111,12 +112,13 @@ hr {
   background-color: rgba(23, 72, 130, 0.2);
   width: 100%;
   height: 100%;
-  color: #fff; }
+  color: #f9bf3b;
+  color: #FFC233; }
   .intro-wrapper .container {
     padding-top: 10%; }
   .intro-wrapper h1, .intro-wrapper h2 {
     text-shadow: 1px 1px 1px #000, .125em .125em 1em black;
-    font-family: 'Lato', sans-serif; }
+    font-family: 'Nautilus Pompilius'; }
 
 @media (max-width: 768px) {
   .intro {
@@ -530,13 +532,13 @@ footer address {
     #tour .cd-timeline-content h2 {
       color: #303e49;
       text-align: center; }
-    #tour .cd-timeline-content p, #tour .cd-timeline-content .cd-read-more, #tour .cd-timeline-content .cd-date {
+    #tour .cd-timeline-content p, #tour .cd-timeline-content ul, #tour .cd-timeline-content .cd-read-more, #tour .cd-timeline-content .cd-date {
       font-size: 1em; }
     #tour .cd-timeline-content .cd-date, #tour .cd-timeline-content .cd-read-more {
       padding: .8em 1em; }
     #tour .cd-timeline-content .cd-read-more, #tour .cd-timeline-content .cd-date {
       display: inline-block; }
-    #tour .cd-timeline-content p {
+    #tour .cd-timeline-content p, #tour .cd-timeline-content ul {
       margin: 1em 0;
       line-height: 1.6; }
     #tour .cd-timeline-content .cd-read-more {
