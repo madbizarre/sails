@@ -112,13 +112,12 @@ hr {
   background-color: rgba(23, 72, 130, 0.2);
   width: 100%;
   height: 100%;
-  color: #f9bf3b;
-  color: #FFC233; }
+  color: #ffffff; }
   .intro-wrapper .container {
     padding-top: 10%; }
   .intro-wrapper h1, .intro-wrapper h2 {
-    text-shadow: 1px 1px 1px #000, .125em .125em 1em black;
-    font-family: 'Nautilus Pompilius'; }
+    text-shadow: 1px 1px 1px #000, .125em .125em 1em black, .25em .25em .4em black;
+    font-family: 'Open Sans'; }
 
 @media (max-width: 768px) {
   .intro {
