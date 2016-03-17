@@ -424,6 +424,19 @@ footer address {
     #info #reward_list .reward_list article h3 {
       font-size: 22px; } }
 
+#list ol li {
+  font-size: 2rem;
+  margin: 2px; }
+
+#collapseDates li {
+  padding: 1rem 0;
+  margin: 2px; }
+#collapseDates ol li {
+  font-size: 2.2rem; }
+#collapseDates ul li {
+  font-size: 2rem;
+  list-style: none; }
+
 #tour {
   background: url(../img/flags/map.jpg) 30% center no-repeat;
   -webkit-background-size: cover;
@@ -435,9 +448,10 @@ footer address {
   #tour .cd-date {
     color: black; }
   #tour a {
-    color: #acb7c0;
     text-decoration: none;
     font-family: "Open Sans", sans-serif; }
+    #tour a:last-child {
+      margin-top: 20px; }
   #tour h2 {
     font-family: "Open Sans", sans-serif;
     font-weight: bold; }
