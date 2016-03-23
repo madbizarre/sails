@@ -18,7 +18,89 @@
     <![endif]-->
 </head>
 
-<% var dates = [
+<% var rewards = [
+    {
+        img_src: '2007_logoRegatta.gif',
+        title: 'Tall Ships’ Races — 2007 Mediterranea'
+    },
+    {
+        img_src: '',
+        title: 'Welt Pokal regatta 2007'
+    },
+    {
+        img_src: '2006_logoRegatta.gif',
+        title: 'Tall Ships’ Races — 2006'
+    },
+    {
+        img_src: '2005_logoRegatta.gif',
+        title: 'Santander Tall Ships’ Regatta — 2005'
+    },
+    {
+        img_src: '2005blue_logoRegatta.gif',
+        title: 'Tall Ships’ Races — 2005'
+    },
+    {
+        img_src: '2004_logoRegatta.gif',
+        title: 'Tall Ships’ Races — 2004'
+    },
+    {
+        img_src: '2003_logoRegatta.gif',
+        title: 'Tall Ships’ Races — 2003'
+    },
+    {
+        img_src: 'cuttySark2002_logoRegatta.gif',
+        title: 'Cutty Sark Tall Ships’ Races — 2002'
+    },
+    {
+        img_src: 'cuttySark_logoRegatta.gif',
+        title: 'Cutty Sark Tall Ships’ Races — 2001'
+    },
+    {
+        img_src: 'cuttySark_logoRegatta.gif',
+        title: 'Cutty Sark Tall Ships’ Races — 2000'
+    },
+    {
+        img_src: 'cuttySark_logoRegatta.gif',
+        title: 'Cutty Sark Tall Ships’ Races — 98'
+    },
+    {
+        img_src: 'cuttySark_logoRegatta.gif',
+        title: 'Cutty Sark Tall Ships’ Races — 97'
+    },
+    {
+        img_src: 'cuttySark_logoRegatta.gif',
+        title: 'Cutty Sark Tall Ships’ Races — 96'
+    },
+    {
+        img_src: 'cuttySark_logoRegatta.gif',
+        title: 'Cutty Sark Tall Ships’ Races — 93'
+    },
+    {
+        img_src: '',
+        title: 'STA Netherlands Feeder Race 1993'
+    },
+    {
+        img_src: '',
+        title: 'Grand regatta Columbus-500'
+    },
+    {
+        img_src: 'cuttySark_logoRegatta.gif',
+        title: 'Cutty Sark Tall Ships’ Races — 91'
+    },
+    {
+        img_src: '',
+        title: 'The 7th Internationale Hochsee Race Der Deetadt Bremerhafen 1991'
+    },
+    {
+        img_src: 'cuttySark_logoRegatta.gif',
+        title: 'Cutty Sark Tall Ships’ Races — 89'
+    },
+    {
+        img_src: 'cuttySark_logoRegatta.gif',
+        title: 'Cutty Sark Tall Ships’ Races — 88'
+    },
+];
+var dates = [
     {
         title: 'Переход. Гамбург – Ларвик (8-14 мая 2016)',
         list: [
@@ -451,166 +533,17 @@
 
                 <div class="collapse" id="collapseReward">
                     <div class="reward_list">
+                        <% rewards.forEach(function(item){ %>
                         <article class="reward_item">
-                            <img alt="" src="img/reward/2007_logoRegatta.gif" width="70" height="100">
+                            <img alt="" src="img/reward/<%= item.img_src || 'default.png' %>" width="70" height="100">
 
                             <h3>
-                                <i class="fa fa-angle-double-left"></i>Tall Ships’ Races — 2007 Mediterranea<i
-                                        class="fa fa-angle-double-right"></i>
+                                <i class="fa fa-angle-double-left"></i>
+                                <%= item.title %>
+                                <i class="fa fa-angle-double-right"></i>
                             </h3>
                         </article>
-                        <article class="reward_item">
-                            <img alt="" src="img/reward/default.png" width="100" height="100">
-
-                            <h3>
-                                <i class="fa fa-angle-double-left"></i>Welt Pokal regatta 2007<i
-                                        class="fa fa-angle-double-right"></i>
-                            </h3>
-                        </article>
-                        <article class="reward_item">
-                            <img alt="" src="img/reward/2006_logoRegatta.gif" width="70" height="100">
-
-                            <h3>
-                                <i class="fa fa-angle-double-left"></i>Tall Ships’ Races — 2006<i
-                                        class="fa fa-angle-double-right"></i>
-                            </h3>
-                        </article>
-                        <article class="reward_item">
-                            <img alt="" src="img/reward/2005_logoRegatta.gif" width="70" height="100">
-
-                            <h3>
-                                <i class="fa fa-angle-double-left"></i>Santander Tall Ships’ Regatta — 2005<i
-                                        class="fa fa-angle-double-right"></i>
-                            </h3>
-                        </article>
-                        <article class="reward_item">
-                            <img alt="" src="img/reward/2005blue_logoRegatta.gif" width="70" height="100">
-
-                            <h3>
-                                <i class="fa fa-angle-double-left"></i>Tall Ships’ Races — 2005<i
-                                        class="fa fa-angle-double-right"></i>
-                            </h3>
-                        </article>
-                        <article class="reward_item">
-                            <img alt="" src="img/reward/2004_logoRegatta.gif" width="70" height="100">
-
-                            <h3>
-                                <i class="fa fa-angle-double-left"></i>Tall Ships’ Races — 2004<i
-                                        class="fa fa-angle-double-right"></i>
-                            </h3>
-                        </article>
-                        <article class="reward_item">
-                            <img alt="" src="img/reward/2003_logoRegatta.gif" width="70" height="100">
-
-                            <h3>
-                                <i class="fa fa-angle-double-left"></i>Tall Ships’ Races — 2003<i
-                                        class="fa fa-angle-double-right"></i>
-                            </h3>
-                        </article>
-                        <article class="reward_item">
-                            <img alt="" src="img/reward/cuttySark2002_logoRegatta.gif" width="70" height="100">
-
-                            <h3>
-                                <i class="fa fa-angle-double-left"></i>Cutty Sark Tall Ships’ Races — 2002<i
-                                        class="fa fa-angle-double-right"></i>
-                            </h3>
-                        </article>
-                        <article class="reward_item">
-                            <img alt="" src="img/reward/cuttySark_logoRegatta.gif" width="70" height="100">
-
-                            <h3>
-                                <i class="fa fa-angle-double-left"></i>Cutty Sark Tall Ships’ Races — 2001<i
-                                        class="fa fa-angle-double-right"></i>
-                            </h3>
-                        </article>
-                        <article class="reward_item">
-                            <img alt="" src="img/reward/cuttySark_logoRegatta.gif" width="70" height="100">
-
-                            <h3>
-                                <i class="fa fa-angle-double-left"></i>Cutty Sark Tall Ships’ Races — 2000<i
-                                        class="fa fa-angle-double-right"></i>
-                            </h3>
-                        </article>
-                        <article class="reward_item">
-                            <img alt="" src="img/reward/cuttySark_logoRegatta.gif" width="70" height="100">
-
-                            <h3>
-                                <i class="fa fa-angle-double-left"></i>Cutty Sark Tall Ships’ Races — 98<i
-                                        class="fa fa-angle-double-right"></i>
-                            </h3>
-                        </article>
-                        <article class="reward_item">
-                            <img alt="" src="img/reward/cuttySark_logoRegatta.gif" width="70" height="100">
-
-                            <h3>
-                                <i class="fa fa-angle-double-left"></i>Cutty Sark Tall Ships’ Races — 97<i
-                                        class="fa fa-angle-double-right"></i>
-                            </h3>
-                        </article>
-                        <article class="reward_item">
-                            <img alt="" src="img/reward/cuttySark_logoRegatta.gif" width="70" height="100">
-
-                            <h3>
-                                <i class="fa fa-angle-double-left"></i>Cutty Sark Tall Ships’ Races — 96<i
-                                        class="fa fa-angle-double-right"></i>
-                            </h3>
-                        </article>
-                        <article class="reward_item">
-                            <img alt="" src="img/reward/cuttySark_logoRegatta.gif" width="70" height="100">
-
-                            <h3>
-                                <i class="fa fa-angle-double-left"></i>Cutty Sark Tall Ships’ Races — 93<i
-                                        class="fa fa-angle-double-right"></i>
-                            </h3>
-                        </article>
-                        <article class="reward_item">
-                            <img alt="" src="img/reward/default.png" width="100" height="100">
-
-                            <h3>
-                                <i class="fa fa-angle-double-left"></i>STA Netherlands Feeder Race 1993<i
-                                        class="fa fa-angle-double-right"></i>
-                            </h3>
-                        </article>
-                        <article class="reward_item">
-                            <img alt="" src="img/reward/default.png" width="100" height="100">
-
-                            <h3>
-                                <i class="fa fa-angle-double-left"></i>Grand regatta Columbus-500<i
-                                        class="fa fa-angle-double-right"></i> 1992
-                            </h3>
-                        </article>
-                        <article class="reward_item">
-                            <img alt="" src="img/reward/cuttySark_logoRegatta.gif" width="70" height="100">
-
-                            <h3>
-                                <i class="fa fa-angle-double-left"></i>Cutty Sark Tall Ships’ Races — 91<i
-                                        class="fa fa-angle-double-right"></i>
-                            </h3>
-                        </article>
-                        <article class="reward_item">
-                            <img alt="" src="img/reward/default.png" width="100" height="100">
-
-                            <h3>
-                                <i class="fa fa-angle-double-left"></i>The 7th Internationale Hochsee Race Der Deetadt
-                                Bremerhafen 1991<i class="fa fa-angle-double-right"></i>
-                            </h3>
-                        </article>
-                        <article class="reward_item">
-                            <img alt="" src="img/reward/cuttySark_logoRegatta.gif" width="70" height="100">
-
-                            <h3>
-                                <i class="fa fa-angle-double-left"></i>Cutty Sark Tall Ships’ Races — 89<i
-                                        class="fa fa-angle-double-right"></i>
-                            </h3>
-                        </article>
-                        <article class="reward_item">
-                            <img alt="" src="img/reward/cuttySark_logoRegatta.gif" width="70" height="100">
-
-                            <h3>
-                                <i class="fa fa-angle-double-left"></i>Cutty Sark Tall Ships’ Races — 88<i
-                                        class="fa fa-angle-double-right"></i>
-                            </h3>
-                        </article>
+                        <% }); %>
                     </div>
                 </div>
             </section>
@@ -618,32 +551,25 @@
     </section>
 
     <section class="gray" id="dates">
-        <div class="container text-center">
-
-            <h1>Даты
-                <a class="pull-right" role="button" data-toggle="collapse" href="#collapseDates"
-                   aria-expanded="false" aria-controls="collapseDates">показать</a>
-            </h1>
+        <div class="container text-center" id="collapseDates">
+            <h1>Даты</h1>
             <hr class="subtitle-divider"/>
 
-            <div class="collapse text-left" id="collapseDates">
-
-                <ol>
-                    <% var dates_i = 0; dates.forEach(function (item) { %>
-                    <li>
-                        <% dates_i++; %>
-                        <%= item.title %>
-                        <a class="pull-right" role="button" data-toggle="collapse" href="#collapseDate_<%= dates_i; %>"
-                           aria-expanded="false" aria-controls="collapseDate_<%= dates_i; %>">показать</a>
-                        <ul class="collapse text-left" id="collapseDate_<%= dates_i++ %>">
-                            <% item.list.forEach(function (li){ %>
-                            <li><%= li %></li>
-                            <% }) %>
-                        </ul>
-                    </li>
-                    <% }) %>
-                </ol>
-            </div>
+            <ol class="text-left">
+                <% var dates_i = 0; dates.forEach(function (item) { %>
+                <li>
+                    <% dates_i++; %>
+                    <%= item.title %>
+                    <a class="pull-right" role="button" data-toggle="collapse" href="#collapseDate_<%= dates_i; %>"
+                       aria-expanded="false" aria-controls="collapseDate_<%= dates_i; %>">показать</a>
+                    <ul class="collapse text-left" id="collapseDate_<%= dates_i++ %>">
+                        <% item.list.forEach(function (li){ %>
+                        <li><%= li %></li>
+                        <% }) %>
+                    </ul>
+                </li>
+                <% }) %>
+            </ol>
         </div>
     </section>
 
@@ -743,34 +669,7 @@
     </div>
 </div>
 <!-- Yandex.Metrika counter -->
-<script type="text/javascript"> (function (d, w, c) {
-        (w[c] = w[c] || []).push(function () {
-            try {
-                w.yaCounter34841190 = new Ya.Metrika({
-                    id: 34841190,
-                    clickmap: true,
-                    trackLinks: true,
-                    accurateTrackBounce: true,
-                    webvisor: true
-                });
-            } catch (e) {
-            }
-        });
-        var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () {
-            n.parentNode.insertBefore(s, n);
-        };
-        s.type = "text/javascript";
-        s.async = true;
-        s.src = "https://mc.yandex.ru/metrika/watch.js";
-        if (w.opera == "[object Opera]") {
-            d.addEventListener("DOMContentLoaded", f, false);
-        } else {
-            f();
-        }
-    })(document, window, "yandex_metrika_callbacks");</script>
-<noscript>
-    <div><img src="https://mc.yandex.ru/watch/34841190" style="position:absolute; left:-9999px;" alt=""/></div>
-</noscript>
+<script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter34841190 = new Ya.Metrika({ id:34841190, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="https://mc.yandex.ru/watch/34841190" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"
